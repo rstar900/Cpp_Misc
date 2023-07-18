@@ -38,6 +38,10 @@ int main()
         if (func_map.find(input) != func_map.end())
         {
             func_map[input]();
+        } 
+        else 
+        {
+            std::cout << "Invalid function name try again!" << std::endl;
         }
     } while (input != "quit");
    
