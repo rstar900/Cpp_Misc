@@ -6,10 +6,22 @@
 namespace MySpace
 {
   class MyClass{};
+
+  // This version will be called
   void do_something(MyClass x)
   {
     std::cout << "Running do_something under MySpace namespace" << std::endl;
   }
+
+ namespace MySpace2 
+ {
+    // This will not cause any ambiguity as this is not a directly visible namespace for anything defined in MySpace
+    void do_something(MyClass x)
+  {
+    std::cout << "Running do_something under MySpace2 namespace" << std::endl;
+  }
+
+ } 
 }
 
 // If the below line is uncommented, then the compiler is confused
