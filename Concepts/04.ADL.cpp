@@ -12,6 +12,12 @@ namespace MySpace
   }
 }
 
+// If the below line is uncommented, then the compiler is confused
+/*void do_something(MySpace::MyClass x) 
+  {
+    std::cout << "Running do_something under no namespace" << std::endl;
+  }*/
+
 int main()
 {
   MySpace::MyClass obj;
