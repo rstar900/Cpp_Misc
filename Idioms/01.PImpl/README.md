@@ -1,3 +1,12 @@
 # PImpl
 PImpl stands for <b>"Pointer to Implementation"<b>
-<br> TODO <br>
+<br> TODO Explanation <br>
+
+## How to test the example
+
+```
+g++ -c special_point.cpp
+ar rcs libspecial_point.a special_point.o
+g++ main.cpp -L. -lspecial_point -o main
+./main
+```
