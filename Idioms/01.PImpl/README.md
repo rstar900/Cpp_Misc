@@ -1,3 +1,3 @@
-# PImpl Idiom
+# PImpl
 PImpl stands for <b>"Pointer to Implementation"<b>
 <br> TODO <br>
