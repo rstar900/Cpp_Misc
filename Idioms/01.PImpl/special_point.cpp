@@ -13,7 +13,7 @@ struct SpecialPoint::SpecialPointImpl
 
     // Same applies to functions, then the class object just calls the function within
     // the pImpl object via indirection as shown below in SpecialPoint::print_point()
-    print_point()
+    void print_point()
     {
         std::cout << "x: " << x << ", y: " << y << ", z: " << z << std::endl;
     }
