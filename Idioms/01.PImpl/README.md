@@ -1,6 +1,7 @@
 # PImpl
 PImpl stands for <b>"Pointer to Implementation"<b>
 <br> TODO Explanation <br>
+<br> Separate Lib code in lib folder <br>
 
 ## How to test the example
 ### Static Linking
