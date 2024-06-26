@@ -15,5 +15,10 @@ g++ main.cpp -Llib. -lspecial_point -o main
 
 ### Dynamic Linking
 ```
-TODO
+cd lib
+g++ -c -fPIC special_point.cpp
+g++ -shared special_point.o -o libspecial_point.so
+cd ..
+g++ main.cpp -Llib -lspecial_point -Wl,-rpath lib -o main
+./main
 ```
