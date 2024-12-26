@@ -30,26 +30,26 @@ int main()
     while (true)
     {
         // We are using flush to display the stdout buffer immediately, else it waits for newline and we might not see the desired output
-        
-        std::cout << "\rLOADING [     ]" << std::flush;
+
+        std::cout << "\rLOADING 0%   [     ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [*    ]" << std::flush;
+        std::cout << "\rLOADING 20%  [*    ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [**   ]" << std::flush;
+        std::cout << "\rLOADING 40%  [**   ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [***  ]" << std::flush;
+        std::cout << "\rLOADING 60%  [***  ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [**** ]" << std::flush;
+        std::cout << "\rLOADING 80%  [**** ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [*****]" << std::flush;
+        std::cout << "\rLOADING 100% [*****]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [**** ]" << std::flush;
+        std::cout << "\rLOADING 80%  [**** ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [***  ]" << std::flush;
+        std::cout << "\rLOADING 60%  [***  ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [**   ]" << std::flush;
+        std::cout << "\rLOADING 40%  [**   ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "\rLOADING [*    ]" << std::flush;
+        std::cout << "\rLOADING 20%  [*    ]" << std::flush;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     
