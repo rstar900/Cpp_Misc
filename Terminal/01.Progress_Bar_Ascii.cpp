@@ -16,6 +16,8 @@ void signal_handler(int signal_num)
 
 int main()
 {
+    // Inspiration from answer to the post at https://stackoverflow.com/questions/67325760/how-does-a-terminal-ascii-animation-work
+    
     // In this program, we will use carriage return ('\r'), to overwrite the same line again and again with new characer sequence
     // Along with sleeps between each rewrite to give the effect of animation
 
