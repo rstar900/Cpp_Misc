@@ -4,6 +4,8 @@
 #include <csignal>
 #include <cstdlib> // for system()
 
+auto time_ms = std::chrono::milliseconds(200); // Milliseconds between each load refresh
+
 // Make the cursor appear again and clear the terminal
 void signal_handler(int signal_num) 
 { 
@@ -14,7 +16,6 @@ void signal_handler(int signal_num)
 
 int main()
 {
-    // Inspiration from answer to the post at https://stackoverflow.com/questions/67325760/how-does-a-terminal-ascii-animation-work
     // In this program, we will use carriage return ('\r'), to overwrite the same line again and again with new characer sequence
     // Along with sleeps between each rewrite to give the effect of animation
 
@@ -33,25 +34,25 @@ int main()
         // We are using flush to display the stdout buffer immediately, else it waits for newline and we might not see the desired output
 
         std::cout << "\rLOADING 0%   [     ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 20%  [*    ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 40%  [**   ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 60%  [***  ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 80%  [**** ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 100% [*****]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 80%  [**** ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 60%  [***  ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 40%  [**   ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
         std::cout << "\rLOADING 20%  [*    ]" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(time_ms);
     }
     
     return 0;
